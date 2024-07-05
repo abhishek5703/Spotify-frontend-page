@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Using Font Awesome by including the CDN link of Font Awesome-->
+    <link rel="stylesheet" href="style.css"> <!--Linking CSS file , style.CSS-->
+    <link rel="icon" href="./assets/logo.png"> <!--Logo icon at the tabs of the browser-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--Using Google fonts by including it -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<!--This website has 3 major parts sidebar , main content and music player which is at bottom-->
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <!--It has 2 sections nav (home and search) and library-->
+            <div class="nav">
+                <div class="nav-option" style="opacity: 1;">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Home</a>
+                </div>
+                <div class="nav-option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search</a>
+                </div>
+            </div>
+            <div class="library">
+                <!--It has also 2 sections one is our library optiona and the other is boxes -->
+                <div class="options">
+                    <div class="library-option nav-option"> <!--Library icon and library name , I also give it the nav-option class so that the styling of nav-option will be also applied on this class-->
+                        <img src="./assets/library_icon.png" alt="Library icon">
+                        <a href="#">Your Library</a>
+                    </div>
+                    <div class="icons"> <!--the plus(+) and arrow icon(->) are present in this-->
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="Library-box">
+                    <div class="box">   <!--Box1-->
+                        <p class="box-p1">Create your first playlist</p> <!--paragraph so that there will be a space betweenthese 2 paragraph-->
+                        <p class="box-p2">It's easy, we'll help you</p>
+                        <button class="badge">Create playlist</button>
+                    </div>
+                    <div class="box">   <!--Box2-->
+                        <p class="box-p1">Let's find some podcast to follow</p> <!--paragraph so that there will be a space betweenthese 2 paragraph-->
+                        <p class="box-p2">We'll keep you updated on new episode</p>
+                        <button class="badge">Browse podcast</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <!--The main setion has 2 parts first is the sticky navbar at the top of the main section and the second is the cards after tha navbar-->
+            <div class="sticky-nav">   <!--Navbar of the main section-->
+                <div class="sticky-nav-left-icon">
+                    <img src="./assets/backward_icon.png" alt="Back">
+                    <img src="./assets/forward_icon.png" alt="Next" class="hide">  <!--This hide class helps to hide the elements when screen size is less than 1000px-->
+                </div>
+                <div class="sticky-nav-right-buttons">
+                    <button class="badge nav-item hide">Explore premium</button>   <!--This nav-item class helps to set margin to all buttons and icons and it also had a hide class for hide feature-->
+                    <button class="badge nav-item dark-badge"><i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i>Install App</button> <!--This dark-badge class changes the color of the install button-->
+                    <i class="fa-regular fa-user nav-item"></i>
+                </div>
+                
+            </div>
+            
+                <h2>Recently Played</h2>   
+                <div class="card-container">    <!--this will create a line of cards which have multiple cards-->
+                    <div class="card">    <!-- I will style this one card and by using this i will create multiple cards of similar type by using the class = "Card"-->
+                        <img src="./assets/card8img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Arjan Vailly (From"Animal")</p>
+                        <p class="card-info">Manan Bhardwaj , Bhupinder Babbal</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card7img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Sajni (From "Laapataa...")</p>
+                        <p class="card-info">Ram Sampath . Arijit Singh . Prashant Pandey</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card9img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Let Me Down Slowly</p>
+                        <p class="card-info">Alec Benjamin</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card10img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Tera Yaar Hoon Main</p>
+                        <p class="card-info">Rochak Kohli , Arijit Singh</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card11img.webp" alt="image" class="card-image">
+                        <p class="card-title">Yalgaar</p>
+                        <p class="card-info">Ajey Nagar (CarryMinati)</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card12img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Dangal</p>
+                        <p class="card-info">Pritam, Daler Mahendi</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card13img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Challa</p>
+                        <p class="card-info">Romy, Vivek Hariharan, Shashwat Sachdev</p>
+                    </div>
+                </div>
+
+                <h2>Trending now near you</h2>
+                <div class="card-container">   <!-- another line of cards and due to flex display all cards in it are shown in one horizontal line-->
+                    <div class="card">    
+                        <img src="./assets/card2img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Mahiye Jinna Sohna</p>
+                        <p class="card-info">Darshan Rawal</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card14img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Aam Jahe Munde</p>
+                        <p class="card-info">Parmish Verma, PARDHAAN, Desi Crew</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card4img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Naa Ready (From"Leo")</p>
+                        <p class="card-info">Anirudh Ravichander</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card15img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Thoda Thoda Pyaar</p>
+                        <p class="card-info">Nilesh Ahuja, Kumaar, Stebin Ben</p>
+                    </div>
+                </div>
+                <h2>Featured Charts</h2>   
+                <div class="card-container">    <!--this will create a line of cards which have multiple cards-->
+                    <div class="card">    
+                        <img src="./assets/card5img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Top Songs - Global</p>
+                        <p class="card-info">Your weekly updates of the most played...</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card6img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Top Songs - India</p>
+                        <p class="card-info">Your weekly updates of the most played...</p>
+                    </div>
+                    <div class="card">    
+                        <img src="./assets/card1img.jpeg" alt="image" class="card-image">
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily updates of the most played...</p>
+                    </div>
+                    
+                </div>
+                <div class="Bottom-footer-info-container">  <!--It is a footer who have more options related to different fields like related to compamy and it has 5 sections in which the last one is all about the social media of the company-->
+                    <div class="company footer-div-style">
+                        <ul>
+                            <li class="Bottom-footer-title" style="opacity: 1; font-size: 1rem;">Company</li>
+                            <li>About</li>
+                            <li>Jobs</li>
+                            <li>For the Record</li>
+                        </ul>
+                    </div>
+                    <div class="community footer-div-style">
+                        <ul>
+                            <li class="Bottom-footer-title" style="opacity: 1; font-size: 1rem;">Communities</li>
+                            <li>For Artists</li>
+                            <li>Developers</li>
+                            <li>Advertising</li>
+                            <li>Investors</li>
+                            <li>Vendors</li>
+                        </ul>
+                    </div>
+                    <div class="useful-links footer-div-style">
+                        <ul>
+                            <li class="Bottom-footer-title" style="opacity: 1; font-size: 1rem;">Useful Links</li>
+                            <li>Support</li>
+                            <li>Free Mobile App</li>
+                        </ul>
+                    </div>
+                    <div class="spotify-plans footer-div-style">
+                        <ul>
+                            <li class="Bottom-footer-title" style="opacity: 1; font-size: 1rem;">Spotify Plans</li>
+                            <li>Premium Individual</li>
+                            <li>Premium Duo</li>
+                            <li>Premium Family</li>
+                            <li>Premium Student</li>
+                            <li>Spotify Free</li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-media-icons footer-div-style">
+                        <div class="footer-instagram footer-icon-style">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="footer-twitter footer-icon-style">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="footer-facebook footer-icon-style">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="footer">   <!--In main spotify website there is a footer above the bottom music player-->
+                    <div class="option-under-footer">
+                        <ul>
+                            <li>Legal</li>
+                            <li>Safety & Privacy</li>
+                            <li>Privacy Policy</li>
+                            <li>Cookies</li>
+                            <li>About Ads</li>
+                            <li>Accessibility</li>
+                        </ul>
+                    </div>
+                    <div class="copyright-spotify">
+                        © 2024 Spotify AB
+                    </div>
+                </div>
+        </div>
+        <div class="music-player">  <!-- it is a music player at bottom-->
+            <!--it has 3 parts the left one is an album part having name and 2 icons , the middle part have music controls and the right most part have some more controls in it , the middle part have 50% of the total width-->
+            <div class="left-part">
+                <div class="left-part-photo">
+                    <img src="./assets/card15img.jpeg" alt="Photo">
+                </div>
+                <div class="left-part-name-content">
+                    <div class="left-part-name">Thoda Thoda Pyaar</div >
+                    <div class="left-part-name singer">Nilesh Ahuja, Kumaar</div>
+                </div>
+                <div class="left-part-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+            </div>
+            <div class="middle-part"> <!--it has 2 divs the one having the 5 icons and the second one below is the range and time stamp-->
+                <div class="player-controls">   <!--it has 5 icons showing all the controls for the play of music-->
+                    <img src="./assets/player_icon1.png" alt="Move" class="player-control-icon">
+                    <img src="./assets/player_icon2.png" alt="Back" class="player-control-icon">
+                    <img src="./assets/player_icon3.png" alt="Play" class="player-control-icon" style="opacity: 1;height: 2rem;">  <!--middle ply button-->
+                    <img src="./assets/player_icon4.png" alt="Next" class="player-control-icon">
+                    <img src="./assets/player_icon5.png" alt="Loop" class="player-control-icon">
+                </div>
+                <div class="playback-bar">    <!-- it is the time option just below the music controls and it having the input of type range-->
+                    <span class="current-time">00:00</span>
+                    <input type="range" min="0" max="100" class="progress-bar" step="1">   <!--It is also a type of input and it takes an input between the given range looks like a sliding pointer-->
+                    <span class="total-time">03:33</span>   <!--here for changing the current time we need to know the Javascript-->
+                </div>
+            </div>
+            <div class="right-part">
+                <div style="width: 10%;" class="live-tv right-div">
+                    <img src="./assets/music-right-icon1.png" alt="Live">
+                </div>
+                <div style="width: 10%;" class="mic-icon right-div">
+                    <img src="./assets/music-right-icon2.png" alt="Music">
+                </div>
+                <div style="width: 10%;" class="music-icon right-div">
+                    <img src="./assets/music-right-icon3.png" alt="Queue">
+                </div>
+                <div style="width: 10%;" class="device-connect right-div">
+                    <img src="./assets/music-right-icon4(1).png" alt="Connect to device">
+                </div>
+                <div style="width: 40%;" class="Volume right-div">   <!-- 40% of the total width of the right part and other components will get 10% width-->
+                    <img src="./assets/music-right-icon5.png" alt="Volume">
+                    <input type="range">
+                </div>
+                <div style="width: 10%;" class="mini-player right-div">
+                    <img src="./assets/music-right-icon4.png" alt="Mini player">
+                </div>
+                <div style="width: 10% ; margin-right: 0.5rem;" class="full-screen right-div">
+                    <img src="./assets/music-right-icon6.png" alt="Full scrren">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

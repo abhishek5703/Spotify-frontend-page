@@ -1,0 +1,336 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;  /*It hides the content which is overflow*/
+}
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+    
+}
+.sidebar{
+    background-color:  black;   /*This is the exact grey color of the background of original website given by color picker*/
+    width: 340px;
+    border-radius: 1rem;  /* 1 rem = 16px in my browser window because the default font size of root is 16px*/
+    margin-right: 0.5rem;
+}
+.main-content{
+    background-color: #121212;
+    flex: 1; /*It means that all divs takes its space and after this all left space will be given to me */
+    border-radius: 1rem;  /* 1 rem = 16px in my browser window because the default font size of root is 16px*/
+    overflow: auto;   /*When we need scroolbar then the scroolbar will appear when the content will overflown*/
+    padding: 0 1.5rem 0 1.5rem;
+}
+.music-player{
+    background-color: black;
+    position: fixed; /*The music player will be fixed at bottom*/
+    bottom: 0px;  /*The music player is at bottom*/
+    width: 100%; /*takes 100% width*/
+    height: 72px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+}
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*Ususally justify content center will center horizontally but here the flex direction is column thats why it will justify vertically*/
+    height: 100px;
+    padding: 0.5rem 0.75rem ; /*0.5rem means 8px padding up and down and 0.75rem means 12px , it is relative to the font size and we use this to make our website responsive for small screens*/
+}
+.nav-option{
+    line-height: 2.5rem;   /*line height = height taken by content of 1 line and here we have 2 lines one for home and second for search and 2.5rem is equal to 40px for my screen and due to 2.5rem , it is responsive for ohter screens*/
+    opacity: 0.7;
+    padding: 0.5rem 0.7rem;
+}
+.nav-option i{
+    font-size: 1.25rem;   /* 20px for my screen*/
+}
+.nav-option a{
+    font-size: 1rem;   /*16px for my screen*/
+    
+}
+.nav-option:hover{ /*when i hover at option , it will look bright*/
+    opacity: 1;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;   /*It takes all rest height which is left after nav options since there is no more div in sidebar so let library div takes all left height of the sidebar*/
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+
+
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.library-option img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+
+}
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.icons i:hover{
+    opacity: 1;
+}
+.box{
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.75rem 0; /*top right bottom left*/
+    padding: 0.5rem 1rem; /*top,botton and left,right*/
+
+
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge{
+    background-color: white;
+    border: none;   /*A Bydefault border is given in the button and i have to remove that border*/
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+
+}
+.dark-badge{
+    background-color: black;
+    color: white;
+}
+.sticky-nav{
+    position: sticky;  /*position sticky means that if i scrool then it will remain stick on their position but in position fixed the navbar is fixed*/
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+
+}
+.sticky-nav-left-icon{
+    margin-left: 0.75rem;
+
+}
+.sticky-nav-right-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav-item{    /*This nav-item class helps to give margins to the right components of the sticky-navbar*/
+    margin-right: 1rem;
+}
+@media (max-width: 1000px){   /*when the width of the screen becomes small than 1000px then those elements who have this 'hide' class will be disappered*/
+    .hide{
+        display: none;      /*Explore premium button and fordward icon have this class so if i open this on a screen less than 1000px will not shown this property*/
+    }
+}
+.card{
+    background-color: #232323;    /*Light grey*/
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem;
+    margin-top: 1rem;
+}
+.card-container{  /*By this all cards are in horizontal position in a single line*/
+    display: flex;
+    flex-wrap: wrap;  /*By this , if a container has more no. of cards then their size will be shrink and they are not look well and that's why apply this property so that if this condition occur then the cards will retain its original size and the extra cards will move in the next line so for the small screen , the cards will move to the next line*/
+}
+.card-image{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+
+}
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.5rem;
+}
+.Bottom-footer-info-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-div-style{
+    width: 18%;
+    display: flex;
+    justify-content: center;
+}
+.footer-div-style ul li{
+    list-style: none;
+    opacity: 0.7;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.footer-div-style ul li:hover{
+    opacity: 1;
+}
+.Bottom-footer-title{
+    font-weight: 800;
+    opacity: 2;
+    font-size: 1.2rem;
+}
+.footer-social-media-icons{
+    display: flex;
+    justify-content: center;
+    width: 28%;
+}
+.footer-icon-style{
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.footer{
+    height: 160px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    justify-content: space-between;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.765);
+}
+.option-under-footer ul{
+    display: flex;
+    
+}
+.option-under-footer ul li{
+    list-style: none;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    padding: 0.6rem;
+    
+}
+
+.copyright-spotify{
+    opacity: 0.7;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+}
+/*-------------------From here I am starting to add the CSS stying to the music player which is at the bottom--------------------*/
+.music-player{    /*It is a bottom music player*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-part{  /*left portion of the music player*/
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.left-part-photo{     /*It is a div who has the small photo which is appeared at the left part of the bottom music player*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    width: 20%;
+}
+.left-part-icons{
+    width: 20%;
+}
+.left-part .left-part-photo img{
+    width: 3.5rem;
+    height: 3.5rem;
+    bottom: 3px;
+}
+.left-part-name-content{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.left-part-name{
+    font-size: 1.2rem;
+    margin-left: 0px;
+    font-weight: 600;
+}
+.singer{
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+.left-part-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.left-part-icons i{
+    font-size: 1.4rem;
+    opacity: 0.6;
+}
+.left-part-icons i:hover{
+    opacity: 1;
+}
+.middle-part{  /*It is a middle portion*/
+    width: 50%;
+}
+.player-controls{  /*It is a div who having all the controls in the middle part*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon{    /*It is the styling applied on each icon of the*/
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+   
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.playback-bar{       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{     /*Increasing the length of the progess bar */
+    width: 70%;
+}
+.right-part{    /*It is the right most part of the music player*/
+    width: 25%;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-around;
+}
+.right-div{        /*it is a class i am going to give every div who has the right music controlling icons so that same styling will be applied on each icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-div img{    /*These are the icons at the right of the music player*/
+    width: 1.7rem;
+    opacity: 0.6;
+}
+.right-div img:hover{   /*When you hover on that controls icon , their opacity increases to 1 and it looks brighter when we hover on it */
+    opacity: 1;
+}
+
